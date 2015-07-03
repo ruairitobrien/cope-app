@@ -80,17 +80,17 @@ angular.module('starter.services', [])
 
 
         var hoistingTasks = [{
-            img: 'img/personal/hoisting/how-to/Time to Hoist.jpg',
-            audio: 'audio/personal/hoisting/how-to/Time to hoist.mp3'
+            img: 'img/personal/hoisting/how-to/Time_to_Hoist.jpg',
+            audio: 'audio/personal/hoisting/how-to/Time_to_hoist.mp3'
         },{
-            img: 'img/personal/hoisting/how-to/Time for Sling.jpg',
-            audio: 'audio/personal/hoisting/how-to/Time for sling.mp3'
+            img: 'img/personal/hoisting/how-to/Time_for_Sling.jpg',
+            audio: 'audio/personal/hoisting/how-to/Time_for_sling.mp3'
         },{
-            img: 'img/personal/hoisting/how-to/Time to Lift.jpg',
-            audio: 'audio/personal/hoisting/how-to/Time to lift.mp3'
+            img: 'img/personal/hoisting/how-to/Time_to_Lift.jpg',
+            audio: 'audio/personal/hoisting/how-to/Time_to_lift.mp3'
         },{
-            img: 'img/personal/hoisting/how-to/Time for Physiotherapy Bed.jpg',
-            audio: 'audio/personal/hoisting/how-to/Physio bed.mp3'
+            img: 'img/personal/hoisting/how-to/Time_for_Physiotherapy_Bed.jpg',
+            audio: 'audio/personal/hoisting/how-to/Physio_bed.mp3'
         }
         ];
 
