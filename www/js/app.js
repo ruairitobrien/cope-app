@@ -61,6 +61,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       .state('health-mybody-how-to', {
           url: '/health/mybody/how-to',
           templateUrl: 'templates/health-mybody-how-to.html'
+      })
+
+      .state('personal', {
+          url: '/personal',
+          templateUrl: 'templates/personal.html'
       });
 
   // if none of the above states are matched, use this as the fallback
