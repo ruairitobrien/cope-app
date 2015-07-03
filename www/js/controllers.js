@@ -1,9 +1,17 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, categoriesPromise) {
+.controller('DashCtrl', function($scope, categoriesPromise, CategoryService) {
 
         $scope.categories = categoriesPromise.data;
+        CategoryService.setCategoryData(categoriesPromise.data);
 
+        $scope.$watch(function(){
+            return CategoryService.categories;
+        }, function(newVal,oldVal){
+            if(newVal !== oldVal){
+                $scope.categories = newVal;
+            }
+        },true)
     })
 
 .controller('HealthCtrl', function($scope) {
@@ -17,18 +25,21 @@ angular.module('starter.controllers', [])
   
 })
 
-.controller('CategoryCtrl', function($scope) {
+.controller('CategoryCtrl', function($scope, CategoryService) {
+
 
 
     $scope.insert = function(parentId, title, image, audio) {
+
         var newRecord = {
-            parentId: parentId,
-            title: title,
-            image: image,
-            audio: audio
+            parentId: 0,
+            categoryId: '/' + $scope.title,
+            title: $scope.title,
+            image: '/img/sun.jpg',
+            audio: ''
         };
 
-        $scope.categories.push(newRecord);
+        CategoryService.setCategoryData([newRecord]);
 
     };
 

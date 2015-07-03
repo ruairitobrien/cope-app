@@ -2,22 +2,27 @@
   <ion-content class="padding">
       <top-bar></top-bar>
 
-    <div>
+    <div ng-click="this.querySelector('audio').play()">
       <a href="#/newcategory" class="">
         <img src="img/add-category.ico"/>
       </a>
       <h1>Add New Category</h1>
-
+      <audio preload>
+        <source src="/media/CreatePersonalPage.mp3" />
+      </audio>
     </div>
     <br>
 
     <div ng-repeat="cat in categories | filter : {parentId: 0}">
 
-      <div>
+      <div ng-click="this.querySelector('audio').play()">
         <a href="#/category/{{cat.categoryId}}" class="">
           <img src="{{cat.image}}"/>
         </a>
         <h1>{{cat.title}}</h1>
+        <audio preload>
+          <source src="/media/PersonalSkills.mp3" />
+        </audio>
       </div>
 
     </div>
