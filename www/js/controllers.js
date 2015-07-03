@@ -1,5 +1,3 @@
-angular.module('starter.controllers', [])
-
 angular.module('starter.controllers', ['starter.settings'])
 
     .controller('MainCtrl', function ($scope, $location, $rootScope, settings) {
@@ -16,8 +14,7 @@ angular.module('starter.controllers', ['starter.settings'])
         });
 
     })
-    
-.controller('DashCtrl', function($scope, categoriesPromise, CategoryService) {
+    .controller('DashCtrl', function($scope, categoriesPromise, CategoryService) {
 
         $scope.categories = categoriesPromise.data;
         CategoryService.setCategoryData(categoriesPromise.data);
@@ -31,7 +28,7 @@ angular.module('starter.controllers', ['starter.settings'])
         },true)
     })
 
-.controller('HealthCtrl', function($scope) {
+.controller('HealthCtrl', function($scope,Tasks) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -47,7 +44,23 @@ angular.module('starter.controllers', ['starter.settings'])
 
     })
 
-.controller('CategoryCtrl', function($scope, CategoryService) {
+    .controller('PersonalCtrl', function($scope,Tasks) {
+        // With the new view caching in Ionic, Controllers are only called
+        // when they are recreated or on app start, instead of every page change.
+        // To listen for when this page is active (for example, to refresh data),
+        // listen for the $ionicView.enter event:
+        //
+        //$scope.$on('$ionicView.enter', function(e) {
+        //});
+
+
+        $scope.hoistingTasks =Tasks.hoistingTasks();
+
+        $scope.trackAudio = function(audio) {
+            audio.cls = 'task-clicked';
+        };
+    })
+    .controller('CategoryCtrl', function($scope, CategoryService) {
 
     $scope.insert = function(parentId, title, image, audio) {
 

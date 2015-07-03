@@ -95,9 +95,28 @@ angular.module('starter.services', [])
         }];
 
 
-    return {
+
+        var hoistingTasks = [{
+            img: 'img/personal/hoisting/how-to/Time_to_Hoist.jpg',
+            audio: 'audio/personal/hoisting/how-to/Time_to_hoist.mp3'
+        },{
+            img: 'img/personal/hoisting/how-to/Time_for_Sling.jpg',
+            audio: 'audio/personal/hoisting/how-to/Time_for_sling.mp3'
+        },{
+            img: 'img/personal/hoisting/how-to/Time_to_Lift.jpg',
+            audio: 'audio/personal/hoisting/how-to/Time_to_lift.mp3'
+        },{
+            img: 'img/personal/hoisting/how-to/Time_for_Physiotherapy_Bed.jpg',
+            audio: 'audio/personal/hoisting/how-to/Physio_bed.mp3'
+        }
+        ];
+
+        return {
         washTasks: function () {
             return washTasks;
+        },
+        hoistingTasks: function(){
+            return hoistingTasks;
         }
     };
 });
