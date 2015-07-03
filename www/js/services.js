@@ -47,4 +47,20 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+
+.factory('CategoryService', function(){
+
+      var categories = [];
+
+      return {
+        getCategoryData: function(){
+          return this.categories;
+        },
+        setCategoryData: function(cat){
+          this.categories = this.categories.concat(cat);
+        },
+        categories: categories
+      }
+
+    });
