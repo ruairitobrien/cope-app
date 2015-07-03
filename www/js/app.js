@@ -66,6 +66,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       .state('personal', {
           url: '/personal',
           templateUrl: 'templates/personal.html'
+      })
+      .state('hoisting', {
+          url: '/personal/hoisting',
+          templateUrl: 'templates/hoisting.html'
+      })
+      .state('hoisting-how-to', {
+          url: '/personal/hoisting/how-to',
+          templateUrl: 'templates/hoisting-how-to.html',
+          controller: 'PersonalCtrl'
       });
 
   // if none of the above states are matched, use this as the fallback
