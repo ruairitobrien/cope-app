@@ -15,7 +15,7 @@
 
     <div ng-repeat="cat in categories | filter : {parentId: 0}">
 
-      <div ng-click="this.querySelector('audio').play()">
+      <div onclick="this.querySelector('audio').play()">
         <a href="#/category/{{cat.categoryId}}" class="">
           <img src="{{cat.image}}"/>
         </a>
