@@ -4,6 +4,8 @@ var $ = require('gulp-load-plugins')({lazy: true});
 var bower = require('bower');
 var sh = require('shelljs');
 var _ = require('lodash');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 var paths = {
     sass: ['./scss/**/*.scss'],
@@ -39,6 +41,16 @@ gulp.task('sass', function (done) {
         .pipe($.rename({extname: '.min.css'}))
         .pipe(gulp.dest('./www/css/'))
         .on('end', done);
+});
+
+gulp.task('imagemin', function () {
+    return gulp.src('www/img/**/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('www/img/'));
 });
 
 gulp.task('install', ['git-check'], function () {
