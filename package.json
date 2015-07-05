@@ -38,5 +38,9 @@
   ],
   "cordovaPlatforms": [
     "ios"
-  ]
+  ],
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
 }
