@@ -1,0 +1,49 @@
+.default-colour {
+  background-color: #fad2ab;
+}
+
+.red-colour {
+  background-color: red;
+}
+
+.blue-colour {
+  background-color: blue;
+}
+
+.orange-colour {
+  background-color: orange;
+}
+
+.green-colour {
+  background-color: green;
+}
+
+bar.default-colour, bar.default-colour .bar.bar-positive, .default-colour .nav-bar-block ion-header-bar {
+  border-color: #fad2ab;
+  background-color: #fad2ab;
+  background-image: linear-gradient(0deg, #fad2ab, #fad2ab 50%, transparent 50%);
+}
+
+bar.red-colour, bar.red-colour .bar.bar-positive, .red-colour .nav-bar-block ion-header-bar {
+  border-color: red;
+  background-color: red;
+  background-image: linear-gradient(0deg, red, red 50%, transparent 50%);
+}
+
+bar.blue-colour, bar.blue-colour .bar.bar-positive, .blue-colour .nav-bar-block ion-header-bar {
+  border-color: blue;
+  background-color: blue;
+  background-image: linear-gradient(0deg, blue, blue 50%, transparent 50%);
+}
+
+bar.orange-colour, bar.orange-colour .bar.bar-positive, .orange-colour .nav-bar-block ion-header-bar {
+  border-color: orange;
+  background-color: orange;
+  background-image: linear-gradient(0deg, orange, orange 50%, transparent 50%);
+}
+
+bar.green-colour, bar.green-colour .bar.bar-positive, .green-colour .nav-bar-block ion-header-bar {
+  border-color: green;
+  background-color: green;
+  background-image: linear-gradient(0deg, green, green 50%, transparent 50%);
+}
