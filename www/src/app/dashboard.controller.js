@@ -55,6 +55,9 @@
                     {
                         text: (settings.locked) ? '<i class="icon ion-unlocked"></i>Unlock' : '<i class="icon' +
                         ' ion-locked"></i>Lock'
+                    },
+                    {
+                        text: '<i class="icon ion-edit"></i>Edit'
                     }
                 ],
                 titleText: 'Settings',
