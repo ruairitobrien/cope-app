@@ -4,7 +4,7 @@
     var defaultHowTos = [
         {
             id: 1,
-            categoryId: 3,
+            categoryId: 1,
             title: 'Washing',
             image: 'img/health/washing.png',
             video: 'https://www.youtube.com/embed/zxlQn7KaCNU',
@@ -37,7 +37,7 @@
         },
         {
             id: 2,
-            categoryId: 2,
+            categoryId: 0,
             title: 'Hoisting',
             image: 'img/personal/hoisting.jpg',
             video: 'video/personal/hoisting/how-to/hoisting.m4v',

@@ -11,7 +11,8 @@
         '$ionicNavBarDelegate',
         'CategoryService',
         'settings',
-        'colourPicker'
+        'colourPicker',
+        'categoryEditor'
     ];
 
     /* @ngInject */
@@ -21,7 +22,8 @@
                            $ionicNavBarDelegate,
                            CategoryService,
                            settings,
-                           colourPicker) {
+                           colourPicker,
+                           categoryEditor) {
         /* jshint validthis: true */
         var vm = this;
         vm.activate = activate;
@@ -45,6 +47,9 @@
 
             colourPicker.setupColourPickerModal($scope).then(function (modal) {
                 $scope.colourPickerModal = modal;
+            });
+            categoryEditor.setupCategoryEditorModal($scope).then(function (modal) {
+                $scope.categoryEditorModal = modal;
             });
         }
 
@@ -71,6 +76,8 @@
                     } else if (index === 1) {
                         settings.locked = !settings.locked;
                         $ionicNavBarDelegate.showBackButton(!settings.locked);
+                    } else if (index === 2) {
+                        $scope.categoryEditorModal.show();
                     }
 
                     return true;

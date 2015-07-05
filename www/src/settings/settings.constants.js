@@ -5,7 +5,7 @@
         'default-colour',
         'red-colour',
         'blue-colour',
-        'orange-colour',
+        'purple-colour',
         'green-colour'
     ];
 

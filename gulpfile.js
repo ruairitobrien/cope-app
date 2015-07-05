@@ -8,7 +8,7 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
 var paths = {
-    sass: ['./scss/**/*.scss'],
+    sass: ['./scss/**/*.scss', './www/src/**/*.scss'],
     js: ['./www/src/**/*.module.js',
         './www/src/**/*.js',
         '!./www/src/**/*.spec.js'
@@ -72,7 +72,6 @@ gulp.task('git-check', function (done) {
     }
     done();
 });
-
 
 /**
  * Create $templateCache from the html templates

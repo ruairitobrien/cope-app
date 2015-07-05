@@ -2,21 +2,13 @@
     'use strict';
 
     var defaultCategories = [
-    /** {
-            parentId: 0,
-            id: 1,
-            title: 'Social',
-            image: 'img/social.png'
-        },*/
         {
-            parentId: 0,
-            id: 2,
+            id: 0,
             title: 'Personal',
             image: 'img/personal.png'
         },
         {
-            parentId: 0,
-            id: 3,
+            id: 1,
             title: 'Health',
             image: 'img/health.png'
         }
