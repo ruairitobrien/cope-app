@@ -1,5 +1,5 @@
 'use strict';
-var PORT = parseInt(process.env.PORT,10) || 3000;
+var PORT = process.env.OPENSHIFT_NODEJS_PORT || parseInt(process.env.PORT, 10) || 3000;
 
 var express = require('express');
 var app = express(); 
